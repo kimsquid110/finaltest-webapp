@@ -1,50 +1,34 @@
 package com.mvc.lolplayer.model.dto;
 
-import java.sql.Date;
-
-public class PlayerDTO implements java.io.Serializable {
-
-    private String playerId;
+public class PlayerDTO {
+    private int playerCode;
+    //
     private String playerName;
-    private String playerNick;
-    private String email;
-    private String phone;
-    private String teamCode;
+    //
+    private String birthDate;
+    //
     private String position;
-    private String rank;
-    private int gamePlayed;
-    private double kdaRatio;
-    private String coachId;
-    private Date joinDate;
-    private Date retireDate;
-    private String activeYn;
 
-    public PlayerDTO() {
+    //
+    private String bio;
+    //
+    private String contact;
+    // 팀 코드
+    private String teamCode;
+    // 활동 상태
+    private String activeStatus;
+
+
+    public PlayerDTO(){
+
     }
 
-    public PlayerDTO(String playerId, String playerName, String playerNick, String email, String phone, String teamCode, String position, String rank, int gamePlayed, double kdaRatio, String coachId, Date joinDate, Date retireDate, String activeYn) {
-        super();
-        this.playerId = playerId;
-        this.playerName = playerName;
-        this.playerNick = playerNick;
-        this.email = email;
-        this.phone = phone;
-        this.teamCode = teamCode;
-        this.position = position;
-        this.rank = rank;
-        this.gamePlayed = gamePlayed;
-        this.kdaRatio = kdaRatio;
-        this.coachId = coachId;
-        this.joinDate = joinDate;
-        this.retireDate = retireDate;
-        this.activeYn = activeYn;
-    }
-    public String getPlayerId() {
-        return playerId;
+    public int getPlayerCode() {
+        return playerCode;
     }
 
-    public void setPlayerId(String playerId) {
-        this.playerId = playerId;
+    public void setPlayerCode(int playerCode) {
+        this.playerCode = playerCode;
     }
 
     public String getPlayerName() {
@@ -55,36 +39,12 @@ public class PlayerDTO implements java.io.Serializable {
         this.playerName = playerName;
     }
 
-    public String getPlayerNick() {
-        return playerNick;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setPlayerNick(String playerNick) {
-        this.playerNick = playerNick;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getTeamCode() {
-        return teamCode;
-    }
-
-    public void setTeamCode(String teamCode) {
-        this.teamCode = teamCode;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPosition() {
@@ -95,100 +55,49 @@ public class PlayerDTO implements java.io.Serializable {
         this.position = position;
     }
 
-    public String getRank() {
-        return rank;
+    public String getBio() {
+        return bio;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
-    public int getGamePlayed() {
-        return gamePlayed;
+    public String getContact() {
+        return contact;
     }
 
-    public void setGamePlayed(int gamePlayed) {
-        this.gamePlayed = gamePlayed;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
-    public double getKdaRatio() {
-        return kdaRatio;
+    public String getTeamCode() {
+        return teamCode;
     }
 
-    public void setKdaRatio(double kdaRatio) {
-        this.kdaRatio = kdaRatio;
+    public void setTeamCode(String teamCode) {
+        this.teamCode = teamCode;
     }
 
-    public String getCoachId() {
-        return coachId;
+    public String getActiveStatus() {
+        return activeStatus;
     }
 
-    public void setCoachId(String coachId) {
-        this.coachId = coachId;
-    }
-
-    public Date getJoinDate() {
-        return joinDate;
-    }
-
-    public void setJoinDate(Date joinDate) {
-        this.joinDate = joinDate;
-    }
-
-    public Date getRetireDate() {
-        return retireDate;
-    }
-
-    public void setRetireDate(Date retireDate) {
-        this.retireDate = retireDate;
-    }
-
-    public String getActiveYn() {
-        return activeYn;
-    }
-
-    public void setActiveYn(String activeYn) {
-        this.activeYn = activeYn;
+    public void setActiveStatus(String activeStatus) {
+        this.activeStatus = activeStatus;
     }
 
     @Override
     public String toString() {
         return "PlayerDTO{" +
-                "playerId='" + playerId + '\'' +
+                "playerCode=" + playerCode +
                 ", playerName='" + playerName + '\'' +
-                ", playerNick='" + playerNick + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", bosition='" + position + '\'' +
+                ", bio='" + bio + '\'' +
+                ", contact='" + contact + '\'' +
                 ", teamCode='" + teamCode + '\'' +
-                ", position='" + position + '\'' +
-                ", rank='" + rank + '\'' +
-                ", gamePlayed=" + gamePlayed +
-                ", kdaRatio=" + kdaRatio +
-                ", coachId='" + coachId + '\'' +
-                ", joinDate=" + joinDate +
-                ", retireDate=" + retireDate +
-                ", activeYn='" + activeYn + '\'' +
+                ", activeStatus='" + activeStatus + '\'' +
                 '}';
-    }
-
-    public void setEmpId(String empId) {
-    }
-
-    public void setEntDate(Date entDate) {
-    }
-
-    public void setTeamName(String teamName) {
-    }
-
-    public void setDebutYear(Date debutYear) {
-    }
-
-    public void setDetailInfo(String detailInfo) {
-    }
-
-    public void setActiveStatus(String activeStatus) {
-    }
-
-    public void setContact(String contact) {
     }
 }

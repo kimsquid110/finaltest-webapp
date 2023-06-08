@@ -6,7 +6,7 @@
 <body>
 <jsp:include page="../common/header.jsp"/>
 
-선수 코드 : ${ requestScope.selectedPlayer.playerId }<br>
+선수 코드 : ${ requestScope.selectedPlayer.playerCode }<br>
 선수 이름 : ${ requestScope.selectedPlayer.playerName }<br>
 생년월일 : ${ requestScope.selectedPlayer.birthDate }<br>
 포지션 : ${ requestScope.selectedPlayer.position }<br>

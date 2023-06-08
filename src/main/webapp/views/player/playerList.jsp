@@ -19,7 +19,7 @@
     </tr>
     <c:forEach items="${ requestScope.playerList }" var="player">
         <tr>
-            <td>${ player.playerId }</td>
+            <td>${ player.playerCode }</td>
             <td>${ player.playerName }</td>
             <td>${ player.birthDate }</td>
             <td>${ player.position }</td>

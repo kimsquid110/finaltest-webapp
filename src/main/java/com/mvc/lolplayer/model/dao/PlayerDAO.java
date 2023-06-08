@@ -8,7 +8,7 @@ public interface PlayerDAO {
 
     List<PlayerDTO> selectAllPlayers();
 
-    PlayerDTO selectPlayerById(String playerId);
+    PlayerDTO selectPlayerById(int playerCode);
 
     boolean insertPlayer(PlayerDTO player);
 

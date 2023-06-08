@@ -2,62 +2,85 @@ package com.mvc.lolplayer.model.service;
 
 import com.mvc.lolplayer.model.dao.PlayerDAO;
 import com.mvc.lolplayer.model.dto.PlayerDTO;
+import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
+import static com.mvc.common.Template.getSqlSession;
+
 public class PlayerService {
 
-    private PlayerDAO playerDao;
+    private PlayerDAO playerDAO;
 
-    public PlayerService(PlayerDAO playerDao) {
-        this.playerDao = playerDao;
-    }
+    public PlayerDTO selectOnePlayerById(int playerCode) {
+        SqlSession sqlSession = getSqlSession();
 
-    public PlayerService() {
+        playerDAO = sqlSession.getMapper(PlayerDAO.class);
+        PlayerDTO selectedPlayer = playerDAO.selectPlayerById((playerCode));
+        sqlSession.close();
 
+        return selectedPlayer;
     }
 
     public List<PlayerDTO> selectAllPlayers() {
-        return playerDao.selectAllPlayers();
-    }
+        SqlSession sqlSession = getSqlSession();
 
-    public PlayerDTO selectPlayerById(String playerId) {
-        return playerDao.selectPlayerById(playerId);
+        playerDAO = sqlSession.getMapper(PlayerDAO.class);
+        List<PlayerDTO> playerList = playerDAO.selectAllPlayers();
+        sqlSession.close();
+
+        return playerList;
     }
 
     public boolean insertPlayer(PlayerDTO player) {
-        return playerDao.insertPlayer(player);
+        SqlSession sqlSession = getSqlSession();
+
+        playerDAO = sqlSession.getMapper(PlayerDAO.class);
+        boolean result = playerDAO.insertPlayer(player);
+
+        if (result) {
+            sqlSession.commit();
+        } else {
+            sqlSession.rollback();
+        }
+
+        sqlSession.close();
+
+        return result;
     }
 
     public boolean updatePlayer(PlayerDTO player) {
-        return playerDao.updatePlayer(player);
+        SqlSession sqlSession = getSqlSession();
+
+        playerDAO = sqlSession.getMapper(PlayerDAO.class);
+        boolean result = playerDAO.updatePlayer(player);
+
+        if (result) {
+            sqlSession.commit();
+        } else {
+            sqlSession.rollback();
+        }
+
+        sqlSession.close();
+
+        return result;
     }
 
-    public boolean deletePlayer(String playerId) {
-        return playerDao.deletePlayer(playerId);
+    public boolean deletePlayer(int playerCode) {
+        SqlSession sqlSession = getSqlSession();
+
+        playerDAO = sqlSession.getMapper(PlayerDAO.class);
+        boolean result = playerDAO.deletePlayer(String.valueOf(playerCode));
+
+        if (result) {
+            sqlSession.commit();
+        } else {
+            sqlSession.rollback();
+        }
+
+        sqlSession.close();
+
+        return result;
     }
 
-    public int updateEmp(PlayerDTO emp) {
-        return 0;
-    }
-
-    public PlayerDTO selectOneEmpById(String empId) {
-        return null;
-    }
-
-    public List<PlayerDTO> selectAllEmp() {
-        return null;
-    }
-
-    public String selectNewEmpId() {
-        return null;
-    }
-
-    public String selectNewPlayerId() {
-        return null;
-    }
-
-    public PlayerDTO selectOnePlayerById(String playerId) {
-        return null;
-    }
 }

@@ -21,17 +21,17 @@ public class UpdatePlayerServlet extends HttpServlet {
         // 수정할 정보들을 여기에 추가하고 매개변수로 받아올 수 있습니다.
 
         PlayerDTO player = new PlayerDTO();
-        player.setPlayerId(playerId);
+
         // 수정할 정보들을 player 객체에 설정합니다.
 
         boolean result = new PlayerService().updatePlayer(player);
 
         String path = "";
         if(result) {
-            path = "/WEB-INF/views/common/successPage.jsp";
+            path = "/views/common/successPage.jsp";
             request.setAttribute("successCode", "updatePlayer");
         } else {
-            path = "/WEB-INF/views/common/errorPage.jsp";
+            path = "/views/common/errorPage.jsp";
             request.setAttribute("message", "선수 정보 수정 실패!");
         }
 

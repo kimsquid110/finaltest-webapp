@@ -13,7 +13,7 @@ import java.util.List;
 
 @WebServlet("/player/list")
 public class SelectAllPlayerServlet extends HttpServlet {
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         PlayerService playerService = new PlayerService();
@@ -25,10 +25,10 @@ public class SelectAllPlayerServlet extends HttpServlet {
 
         String path = "";
         if(playerList != null) {
-            path = "/WEB-INF/views/player/playerList.jsp";
+            path = "/views/player/playerList.jsp";
             request.setAttribute("playerList", playerList);
         } else {
-            path = "/WEB-INF/common/errorPage.jsp";
+            path = "/views/common/errorPage.jsp";
             request.setAttribute("message", "선수 목록 조회 실패!");
         }
 

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 
 @WebServlet("/player/insert")
 public class InsertPlayerServlet extends HttpServlet {
@@ -18,36 +19,31 @@ public class InsertPlayerServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         String playerName = request.getParameter("playerName");
+        String birthDate = request.getParameter("birthDate");
         String position = request.getParameter("position");
-        String teamName = request.getParameter("teamName");
-        java.sql.Date debutYear = java.sql.Date.valueOf(request.getParameter("debutYear"));
-        String detailInfo = request.getParameter("detailInfo");
-        String activeStatus = request.getParameter("activeStatus");
+        String bio = request.getParameter("bio");
         String contact = request.getParameter("contact");
-
-        PlayerService playerService = new PlayerService();
-        String newPlayerId = playerService.selectNewPlayerId();
+        String teamCode = request.getParameter("teamCode");
+        String activeStatus = request.getParameter("activeStatus");
 
         PlayerDTO player = new PlayerDTO();
-        if(newPlayerId != null) player.setPlayerId(newPlayerId);
         player.setPlayerName(playerName);
+        player.setBirthDate(birthDate);
         player.setPosition(position);
-        player.setTeamName(teamName);
-        player.setDebutYear(debutYear);
-        player.setDetailInfo(detailInfo);
-        player.setActiveStatus(activeStatus);
+        player.setBio(bio);
         player.setContact(contact);
+        player.setTeamCode(teamCode);
+        player.setActiveStatus(activeStatus);
 
-        System.out.println("insert request player : " + player);
-
+        PlayerService playerService = new PlayerService();
         boolean result = playerService.insertPlayer(player);
 
         String path = "";
-        if(result) {
-            path = "/WEB-INF/views/common/successPage.jsp";
+        if (result) {
+            path = "/views/common/successPage.jsp";
             request.setAttribute("successCode", "insertPlayer");
         } else {
-            path = "/WEB-INF/views/common/errorPage.jsp";
+            path = "/views/common/errorPage.jsp";
             request.setAttribute("message", "신규 선수 등록에 실패하셨습니다.");
         }
 

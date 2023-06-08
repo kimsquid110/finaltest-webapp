@@ -16,16 +16,16 @@ public class DeletePlayerServlet extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        String playerId = request.getParameter("playerId");
+        int playerCode = Integer.parseInt(request.getParameter("playerCode"));
 
-        boolean result = new PlayerService().deletePlayer(playerId);
+        boolean result = new PlayerService().deletePlayer(playerCode);
 
         String path = "";
         if(result) {
-            path = "/WEB-INF/views/common/successPage.jsp";
+            path = "/views/common/successPage.jsp";
             request.setAttribute("successCode", "deletePlayer");
         } else {
-            path = "/WEB-INF/views/common/errorPage.jsp";
+            path = "/views/common/errorPage.jsp";
             request.setAttribute("message", "선수 삭제 실패!");
         }
 
