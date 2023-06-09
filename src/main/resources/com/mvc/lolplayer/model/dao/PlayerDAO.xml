@@ -29,7 +29,6 @@
     <update id="updatePlayer">
         UPDATE PLAYER_INFO
         SET PLAYER_NAME = #{playerName},
-            BIRTH_DATE = #{birthDate},
             POSITION = #{position},
             BIO = #{bio},
             CONTACT = #{contact},

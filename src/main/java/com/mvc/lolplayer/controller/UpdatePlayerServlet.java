@@ -16,13 +16,23 @@ public class UpdatePlayerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setCharacterEncoding("UTF-8");
-
-        String playerId = request.getParameter("playerId");
-        // 수정할 정보들을 여기에 추가하고 매개변수로 받아올 수 있습니다.
+        int playerCode = Integer.parseInt(request.getParameter("playerCode"));
+        String playerName = request.getParameter("playerName");
+        String position = request.getParameter("position");
+        String bio = request.getParameter("bio");
+        String contact = request.getParameter("contact");
+        String teamCode = request.getParameter("teamCode");
+        String activeStatus = request.getParameter("activeStatus");
 
         PlayerDTO player = new PlayerDTO();
+        player.setPlayerCode(playerCode);
+        player.setPlayerName(playerName);
+        player.setPosition(position);
+        player.setBio(bio);
+        player.setContact(contact);
+        player.setTeamCode(teamCode);
+        player.setActiveStatus(activeStatus);
 
-        // 수정할 정보들을 player 객체에 설정합니다.
 
         boolean result = new PlayerService().updatePlayer(player);
 

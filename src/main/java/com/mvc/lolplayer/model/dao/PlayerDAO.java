@@ -14,5 +14,5 @@ public interface PlayerDAO {
 
     boolean updatePlayer(PlayerDTO player);
 
-    boolean deletePlayer(String playerId);
+    boolean deletePlayer(int playerCode);
 }

@@ -70,7 +70,7 @@ public class PlayerService {
         SqlSession sqlSession = getSqlSession();
 
         playerDAO = sqlSession.getMapper(PlayerDAO.class);
-        boolean result = playerDAO.deletePlayer(String.valueOf(playerCode));
+        boolean result = playerDAO.deletePlayer(playerCode);
 
         if (result) {
             sqlSession.commit();

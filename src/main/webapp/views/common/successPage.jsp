@@ -12,17 +12,17 @@
         let movePath = '';
 
         switch(successCode) {
-            case 'insertEmp' :
+            case 'insertPlayer' :
                 successMessage = '신규 선수 등록 성공!';
-                movePath = '${pageContext.servletContext.contextPath}/employee/list';
+                movePath = '${pageContext.servletContext.contextPath}/player/list';
                 break;
-            case 'updateEmp' :
+            case 'updatePlayer' :
                 successMessage = '선수 정보 수정 성공!';
-                movePath = '${pageContext.servletContext.contextPath}/employee/list';
+                movePath = '${pageContext.servletContext.contextPath}/player/list';
                 break;
-            case 'deleteEmp' :
+            case 'deletePlayer' :
                 successMessage = '선수 정보 삭제 성공!';
-                movePath = '${pageContext.servletContext.contextPath}/employee/list';
+                movePath = '${pageContext.servletContext.contextPath}/player/list';
                 break;
         }
 

@@ -17,8 +17,8 @@ public class DeletePlayerServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         int playerCode = Integer.parseInt(request.getParameter("playerCode"));
-
-        boolean result = new PlayerService().deletePlayer(playerCode);
+        PlayerService playerService= new PlayerService();
+        boolean result = playerService.deletePlayer(playerCode);
 
         String path = "";
         if(result) {

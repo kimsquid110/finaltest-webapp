@@ -2,20 +2,12 @@ package com.mvc.lolplayer.model.dto;
 
 public class PlayerDTO {
     private int playerCode;
-    //
     private String playerName;
-    //
     private String birthDate;
-    //
     private String position;
-
-    //
     private String bio;
-    //
     private String contact;
-    // 팀 코드
     private String teamCode;
-    // 활동 상태
     private String activeStatus;
 
 
