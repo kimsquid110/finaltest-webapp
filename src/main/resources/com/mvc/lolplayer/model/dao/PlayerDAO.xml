@@ -14,7 +14,7 @@
     </resultMap>
 
     <select id="selectPlayerById" resultMap="playerResultMap">
-        SELECT * FROM PLAYER_INFO WHERE PLAYER_CODE = #{playerId}
+        SELECT * FROM PLAYER_INFO WHERE PLAYER_CODE = #{playerCode}
     </select>
 
     <select id="selectAllPlayers" resultMap="playerResultMap">

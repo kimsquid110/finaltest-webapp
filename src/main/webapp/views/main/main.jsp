@@ -8,7 +8,7 @@
 <h3>PLAYER_INFO 테이블: PLAYER_ID를 이용하여 선수 정보 조회하기</h3>
 <form action="player/select">
     <label>조회할 선수 ID : </label>
-    <input type="text" name="playerId" id="playerId">
+    <input type="text" name="playerCode" id="playerCode">
     <button type="submit">조회</button>
 </form>
 

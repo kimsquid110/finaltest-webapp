@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21877ad5-3338-4f65-be53-5444ae01601f" name="변경" comment="커밋">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mvc/common/config/ConfigLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mvc/common/filter/ContextConfigFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mvc/common/jdbc/JDBCTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mvc/lolplayer/model/dao/PlayerDAO.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="21877ad5-3338-4f65-be53-5444ae01601f" name="변경" comment="2차커밋">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/DeletePlayerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/DeletePlayerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/InsertPlayerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/InsertPlayerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/SelectAllPlayerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/SelectAllPlayerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/SelectOnePlayerByIdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/SelectOnePlayerByIdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/UpdatePlayerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/controller/UpdatePlayerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/dao/PlayerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/dao/PlayerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/dto/PlayerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/dto/PlayerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/lolplayer/model/service/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/Mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/connection-info.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/connection-info.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/player/playerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/player/playerList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/player/showPlayerInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/player/showPlayerInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/mvc/lolplayer/model/dao/PlayerDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/mvc/lolplayer/model/dao/PlayerDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/connection-info.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/connection-info.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/main/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/main/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +64,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimsq\IdeaProjects\finaltest-webapp\src\main\resources\config" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.75" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.75" ALTERNATIVE_JRE_ENABLED="false">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -176,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686202657358</updated>
       <workItem from="1686202658395" duration="6649000" />
-      <workItem from="1686242403898" duration="3960000" />
+      <workItem from="1686242403898" duration="5469000" />
     </task>
     <task id="LOCAL-00001" summary="커밋">
       <created>1686203722371</created>
@@ -185,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686203722371</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2차커밋">
+      <created>1686254732000</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686254732000</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +192,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="커밋" />
-    <option name="LAST_COMMIT_MESSAGE" value="커밋" />
+    <MESSAGE value="2차커밋" />
+    <option name="LAST_COMMIT_MESSAGE" value="2차커밋" />
   </component>
 </project>
